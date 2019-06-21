@@ -133,7 +133,42 @@
           }
         }
       }
+    },
+    "ngx-fire-search": {
+      "projectType": "library",
+      "root": "projects/ngx-fire-search",
+      "sourceRoot": "projects/ngx-fire-search/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-fire-search/tsconfig.lib.json",
+            "project": "projects/ngx-fire-search/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-fire-search/src/test.ts",
+            "tsConfig": "projects/ngx-fire-search/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-fire-search/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-fire-search/tsconfig.lib.json",
+              "projects/ngx-fire-search/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "angular-firebase-search"
+  "defaultProject": "ngx-fire-search"
 }

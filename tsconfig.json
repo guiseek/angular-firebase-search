@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-fire-search": [
+        "dist/ngx-fire-search"
+      ],
+      "ngx-fire-search/*": [
+        "dist/ngx-fire-search/*"
+      ]
+    }
   }
 }
